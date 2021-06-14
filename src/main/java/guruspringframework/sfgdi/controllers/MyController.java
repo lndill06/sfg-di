@@ -1,0 +1,16 @@
+package guruspringframework.sfgdi.controllers;
+
+import org.springframework.stereotype.Controller;
+
+/**
+ * Example controller that doesn't use dependency injection.
+ */
+@Controller
+public class MyController {
+
+    public String sayHello() {
+        System.out.println("Hello World!");
+
+        return "Hi Folks!";
+    }
+}
