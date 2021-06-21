@@ -1,16 +1,17 @@
 package guruspringframework.sfgdi.controllers;
 
 import guruspringframework.sfgdi.services.GreetingService;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 
 /**
- * Example controller that doesn't use dependency injection.
+ * Handles international (I18N) greetings.
  */
 @Controller
-public class MyController {
+public class I18nController {
     private final GreetingService greetingService;
 
-    public MyController(GreetingService greetingService) {
+    public I18nController(@Qualifier("i18nService") GreetingService greetingService) {
         this.greetingService = greetingService;
     }
 
